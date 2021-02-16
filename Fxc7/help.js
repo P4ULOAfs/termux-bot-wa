@@ -17,14 +17,14 @@ https://chat.whatsapp.com/GHC5djoQJrcGBJFwYQuQoB
 
 ╭──────「 *REGULATION ${name}* 」
 ┴
-┣⊱  \`\`\`NAMA USER:\`\`\` *${pushname2}*
-┣⊱  \`\`\`VERIVICATION:\`\`\` ✅
+┣⊱  \`\`\`USER NOME:\`\`\` *${pushname2}*
+┣⊱  \`\`\`VERIFICADO:\`\`\` ✅
 ┣⊱  \`\`\`LIMIT:\`\`\` *${limitt} perhari*
-┣⊱  \`\`\`AKTIF:\`\`\` ${kyun(uptime)}
-┣⊱  \`\`\`JAM:\`\`\` *${jam} WIB*
-┣⊱  \`\`\`TANGGAL:\`\`\` *${tanggal}*
+┣⊱  \`\`\`ATIVO:\`\`\` ${kyun(uptime)}
+┣⊱  \`\`\`HORA:\`\`\` *${jam} WIB*
+┣⊱  \`\`\`DATA:\`\`\` *${tanggal}*
 ┣⊱  \`\`\`VERSION:\`\`\` *6.5.0*
-┣⊱  \`\`\`USER TERDAFTAR:\`\`\` *${user.length} User*
+┣⊱  \`\`\`USER REGISTRADO:\`\`\` *${user.length} User*
 ┣⊱  ❌ *SPAM*
 ┣⊱  ❌ *CALL & VC*
 ┣⊱  \`\`\`Melanggar??\`\`\` *Banned + Out Group*
@@ -69,7 +69,7 @@ https://chat.whatsapp.com/GHC5djoQJrcGBJFwYQuQoB
 ╰────────────────────────
 
 
-╭──────「 *CREATOR MENU* 」
+╭──────「 *CRIAR MENU* 」
 ┴
 │➻ *${prefix}quotemaker tx/wtrmk/tema*
 │➻ *${prefix}nulis nama/kelas/text*
@@ -99,7 +99,7 @@ https://chat.whatsapp.com/GHC5djoQJrcGBJFwYQuQoB
 ╰──────────────────────────
 
 
-╭───────「 *GROUP ONLY* 」
+╭───────「 *GRUPO* 」
 ┴
 │➻ *${prefix}modeanime On/Off*
 │➻ *${prefix}neonime naruto*
@@ -122,7 +122,7 @@ https://chat.whatsapp.com/GHC5djoQJrcGBJFwYQuQoB
 ╰───────────────────────
 
 
-╭───────「 *GROUP ONLY* 」
+╭───────「 *GRUPO* 」
 ┴
 │➻ *${prefix}antilink On/Off*
 │➻ *${prefix}welcome On/Off*
@@ -148,7 +148,7 @@ https://chat.whatsapp.com/GHC5djoQJrcGBJFwYQuQoB
 ╰────────────────────────
 
 
-╭───────「 *GROUP ONLY ADMIN* 」
+╭───────「 *GRUPO ADM* 」
 ┴
 │➻ *${prefix}nsfw On/Off*
 │➻ *${prefix}nsfwloli*
@@ -288,7 +288,7 @@ https://chat.whatsapp.com/GHC5djoQJrcGBJFwYQuQoB
 ╰────────────────────────
 
 
-╭─────────「 *OWNER ONLY* 」
+╭─────────「 *PAULO:)* 」
 ┴
 │➻ *${prefix}addprem mentioned*
 │➻ *${prefix}removeprem mention*
