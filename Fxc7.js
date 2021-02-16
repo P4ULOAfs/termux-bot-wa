@@ -68,14 +68,14 @@ const vcard = 'BEGIN:VCARD\n'
             + 'END:VCARD'
 
 prefix = "!"
-name = "~ IRIENE BOT"
-rdaftar = "TERIMA KASIH TELAH DAFTAR MENJADI TEMEN IRIENEBOT😁"
-rmenu = "HAI TEMEN IRIENEBOT👋 JANGAN LUPA DONASI YAA:)"
+name = "~ BARBIE"
+rdaftar = "OBRIGADO POR SE REGISTRAR 😁"
+rmenu = "OLA AMIGO"
 botinfo = "UNTUK INVITE BOT SILAHKAN DONASI DULU YAA:)"
-limitt = 10
-memberLimit = 2
+limitt = 50
+memberLimit = 20
 ban = []
-premium = ["628311800241@s.whatsapp.net"]
+premium = ["19034375199@s.whatsapp.net"]
 
 function kyun(seconds){
   function pad(s){
@@ -201,7 +201,7 @@ async function starts() {
 			}
 
 			const botNumber = frhan.user.jid
-			const ownerNumber = ["628311800241@s.whatsapp.net"] // owner number ubah aja
+			const ownerNumber = ["19034375199@s.whatsapp.net"] // owner number ubah aja
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await frhan.groupMetadata(from) : ''
@@ -312,7 +312,7 @@ async function starts() {
 		frhan.updatePresence(from, Presence.composing)
 		var Kick = `${sender.split("@")[0]}@s.whatsapp.net`
 		setTimeout( () => {
-		reply('byee👋')
+		reply('tchauzinho👋')
 		}, 1100)
 		setTimeout( () => {
 		frhan.groupRemove(from, [Kick]).catch((e) => {reply(`*ERROR:* ${e}`)}) 
@@ -372,6 +372,7 @@ async function starts() {
                 await limitAdd(sender)
 				break 
 		case 'daftar':
+		case 'rg':
 					frhan.updatePresence(from, Presence.composing)
 					if (isUser) return reply('kamu sudah Menjadi Temen IRIENEBOT:D')
 					if (isBanned) return reply(mess.only.benned)
@@ -382,7 +383,7 @@ async function starts() {
 					} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 					}
-					captionnya = `╭─「 *PENDAFTARAN USER* 」\`\`\`\n│ Pendaftaran berhasil dengan SN: \n│ TM08GK8PPHBSJDH10J\`\`\`\n│\n│\`\`\`Pada ${date} ${time}\`\`\`\n│\`\`\`[Nama]: ${pushname2}\`\`\`\n│\`\`\`[Nomor]: wa.me/${sender.split("@")[0]}\`\`\`\n│\`\`\`Untuk menggunakan bot\`\`\`\n│\`\`\`silahkan\`\`\`\n│\`\`\`kirim ${prefix}help/menu\`\`\`\n│\`\`\`\n│Total Pengguna: ${user.length} Orang\`\`\`\n╰─────────────────────────`
+					captionnya = `╭─「 *USUARIO REGISTRADO* 」\`\`\`\n│ Pendaftaran berhasil dengan SN: \n│ TM08GK8PPHBSJDH10J\`\`\`\n│\n│\`\`\`Pada ${date} ${time}\`\`\`\n│\`\`\`[Nome]: ${pushname2}\`\`\`\n│\`\`\`[Numero]: wa.me/${sender.split("@")[0]}\`\`\`\n│\`\`\`Untuk menggunakan bot\`\`\`\n│\`\`\`silahkan\`\`\`\n│\`\`\`kirim ${prefix}help/menu\`\`\`\n│\`\`\`\n│Total Pengguna: ${user.length} Orang\`\`\`\n╰─────────────────────────`
 					daftarimg = await getBuffer(ppimg)
 					frhan.sendMessage(from, daftarimg, image, {quoted: mek, caption: captionnya})
 					break 
@@ -585,6 +586,7 @@ async function starts() {
 				case 'stiker':
 				case 'sticker':
 				case 's':
+				case 'figu':
 						if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await frhan.downloadAndSaveMediaMessage(encmedia)
@@ -781,7 +783,7 @@ async function starts() {
 					setTimeout( () => {
 					frhan.sendMessage(from, '10 Detik lagi', text, {quoted: mek}) // ur cods
 					}, 0) // 1000 = 1s,
-					break 
+					break
 				case 'animecry':
 					cry = getRandom('.gif')
 					rano = getRandom('.webp')
@@ -839,6 +841,7 @@ async function starts() {
 				case 'linkgc':
 				case 'gruplink':
 				case 'grouplink':
+				case 'linkgp':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 				if (!isPublic) return reply(mess.only.publikG)
@@ -899,6 +902,7 @@ async function starts() {
            frhan.sendMessage(from, options, text, { quoted: mek } )
 				break
 				case 'leave': 
+				case 'sair':
 				    if (!isGroup) return reply(mess.only.group)
 					if (!isOwner) return reply(mess.only.ownerB)
 			    	anu = await frhan.groupLeave(from, `Bye All Member *${groupMetadata.subject}*`, groupId)
@@ -1111,7 +1115,7 @@ async function starts() {
                          text: teks1,
                          contextInfo: {mentionedJid: [nomor]},
                      }
-                    frhan.sendMessage('628311800241@s.whatsapp.net', options, text, {quoted: mek})
+                    frhan.sendMessage('19034375199@s.whatsapp.net', options, text, {quoted: mek})
                     reply('Masalah telah di laporkan ke owner BOT, laporan palsu/main2 tidak akan ditanggapi.')
                     break
                 case 'request':
@@ -1127,7 +1131,7 @@ async function starts() {
                          text: ress,
                          contextInfo: {mentionedJid: [nomor]},
                      }
-                    frhan.sendMessage('628311800241@s.whatsapp.net', options, text, {quoted: mek})
+                    frhan.sendMessage('19034375199@s.whatsapp.net', options, text, {quoted: mek})
                     reply('REQUEST ANDA TELAH SAMPAI ke owner BOT, Requests palsu/main2 tidak akan ditanggapi.')
                     break
 				case 'memeindo':
@@ -2091,12 +2095,13 @@ async function starts() {
 
 			case 'persengay':
 			case 'gaypersen':
+			case 'gay':
 				if (!isUser) return reply(mess.only.userB)
 				if (!isPublic) return reply(mess.only.publikG)
 				if (isLimit(sender)) return reply(limitend(pushname2))
-				if (args.length < 1) return reply('tag temanmu!')
+				if (args.length < 1) return reply('marqur seu amigo')
 				rate = body.slice(11)
-				persengayy = ["*4%*\n\n*Tobat Ngegay Gan:v*","*9%*\n\n*OTW Tobat Gan:v*","*17%*\n\n*Kang Coli*","*28%*\n\n*Buset Dah Gay🤦*","*34%*\n\n *Korban Tusbol*","*48%*\n\n*Kang Hunter Bool:v*","*59%*\n\n *Bahaya Ni Orang Gan*","*62%*\n\n*Hati² Sama Ni Orang Beneran Dah*","*74%*\n\n*Astagfirullah Kabur Gan🏃🌬️*","83%\n\n Yaallah Nak🤦","97%\n\nAstagfirullah🤦","100%\n\nKabur ae Gan Daripada Ditusbol Bool lu🏃","29%\n\n amann:v","94%\n\n Yaallah🏃","75%\n\nHadehh Gay🤦","82%\n\nMending Lu Tobat Dah🏃","41%\n\nSering Cari Bool Diperempatan","39%\n\nSering Tusbol Bool Topan🏃"]
+				persengayy = ["*4%*\n\n*gay encubado*","*9%*\n\n*gay encubado*","*17%*\n\n*gay encubado*","*28%*\n\n*pouco gay🤦*","*34%*\n\n *da o cu brincando*","*48%*\n\n*da o cu brincando*","*59%*\n\n *da o cu brincando*","*62%*\n\n*queima rosca*","*74%*\n\n*gayzao do krlh🏃🌬️*","83%\n\n Esse tenho nem oq falar","97%\n\nMuito gay🤦","100%\n\nEsse nao tem mais solução🏃","29%\n\n gay d+","94%\n\n sem solução🏃","75%\n\nTenho nem oq falar 🤦","82%\n\nSaindo do armário🏃","41%\n\nGay encubado","39%\n\nGay encubado🏃"]
 				const kl = persengayy[Math.floor(Math.random() * persengayy.length)]
 				frhan.sendMessage(from, 'Persen Gay: *'+rate+'*\n\nJawaban : '+kl+'', text, { quoted: mek })
 				await limitAdd(sender) 
